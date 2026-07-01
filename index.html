@@ -1,343 +1,267 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KokoroFlow — 讓每一天更流暢的免費工具集</title>
-  <meta name="description" content="KokoroFlow 提供多款免費線上工具，包含 QR Code 生成器、今天吃什麼決策器、常用工具箱，幫助你的日常更有效率。" />
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7127191372584167" crossorigin="anonymous"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>KokoroFlow｜免費線上工具</title>
+  <meta name="description" content="KokoroFlow 提供免費、免註冊、手機與電腦都好用的線上工具。快速開啟常用工具箱或今天吃什麼選餐幫手。">
+  <link rel="canonical" href="https://www.kokoroflow.net/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:       #f5f1eb;
-      --bg2:      #edeae3;
-      --bg3:      #e5e0d7;
-      --ink:      #1e1c18;
-      --ink2:     #5c5850;
-      --ink3:     #8c877e;
-      --rust:     #b8471a;
-      --rust-lt:  #e8c9bc;
-      --border:   #d4cec5;
-      --card-bg:  #faf7f2;
-      --radius:   4px;
+      --bg: #f7f4ee;
+      --surface: #fffdf8;
+      --surface-2: #eee7dc;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #ded7cc;
+      --accent: #2f6f62;
+      --accent-2: #b35a2a;
+      --accent-soft: #e6f1ed;
+      --shadow: 0 16px 50px rgba(32, 33, 36, .08);
+      --radius: 8px;
+      --wrap: 1080px;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; }
     body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Noto Sans TC', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 52px;
-      background: rgba(245,241,235,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Lora', serif;
-      font-size: 1.15rem; font-weight: 600; color: var(--ink);
-      text-decoration: none; letter-spacing: 0.01em;
-    }
-    .nav-logo span { color: var(--rust); font-style: italic; }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a {
-      color: var(--ink2); text-decoration: none; font-size: 0.88rem;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ink); }
-
-    /* HERO */
-    .hero {
+      margin: 0;
       min-height: 100vh;
-      display: flex; flex-direction: column;
-      align-items: flex-start; justify-content: center;
-      padding: 140px 52px 80px;
-      max-width: 900px;
+      font-family: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+      text-size-adjust: 100%;
     }
-    .hero-eyebrow {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--rust); margin-bottom: 28px;
+    a { color: inherit; }
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      z-index: 20;
+      background: var(--text);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      transition: top .2s;
     }
-    .hero h1 {
-      font-family: 'Lora', serif;
-      font-size: clamp(2.6rem, 5.5vw, 4rem);
-      font-weight: 600; line-height: 1.2;
-      letter-spacing: -0.01em; margin-bottom: 28px;
-      color: var(--ink);
+    .skip-link:focus { top: 16px; }
+    .site-header {
+      border-bottom: 1px solid rgba(222, 215, 204, .9);
+      background: rgba(247, 244, 238, .94);
+      backdrop-filter: blur(14px);
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--rust);
+    .nav {
+      max-width: var(--wrap);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-    .hero-desc {
-      font-size: 1.08rem; color: var(--ink2);
-      max-width: 480px; margin-bottom: 48px;
-      line-height: 1.8;
-    }
-    .hero-cta {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--ink); color: var(--bg);
-      padding: 13px 28px; border-radius: 2px;
-      text-decoration: none; font-weight: 500; font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      transition: background 0.2s;
-    }
-    .hero-cta:hover { background: var(--rust); }
-
-    /* TOOLS SECTION */
-    .tools-section {
-      padding: 100px 52px;
-      max-width: 1100px; margin: 0 auto;
-    }
-    .section-eyebrow {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--ink3); margin-bottom: 14px;
-    }
-    .section-title {
-      font-family: 'Lora', serif;
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      font-weight: 600; letter-spacing: -0.01em;
-      margin-bottom: 14px; color: var(--ink);
-    }
-    .section-sub {
-      color: var(--ink2); font-size: 1rem;
-      max-width: 440px; margin-bottom: 56px;
-      line-height: 1.8;
-    }
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
-      background: var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .tool-card {
-      background: var(--card-bg);
-      padding: 32px 28px;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       text-decoration: none;
-      color: var(--ink);
-      display: block;
-      transition: background 0.2s;
+      font-weight: 800;
+      white-space: nowrap;
     }
-    .tool-card:hover { background: #fff; }
-    .tool-card:hover .tool-arrow { color: var(--rust); }
-    .tool-tag {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--ink3);
-      margin-bottom: 14px; display: block;
-    }
-    .tool-card h3 {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem; font-weight: 600;
-      margin-bottom: 10px; color: var(--ink); line-height: 1.4;
-    }
-    .tool-card p {
-      color: var(--ink2); font-size: 0.88rem; line-height: 1.75;
-    }
-    .tool-arrow {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 20px; font-size: 0.82rem;
-      color: var(--ink3);
-      transition: color 0.2s;
-      font-family: 'IBM Plex Mono', monospace;
-      letter-spacing: 0.04em;
-    }
-
-    /* WHY SECTION */
-    .why-section {
-      padding: 80px 52px;
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .why-inner { max-width: 1100px; margin: 0 auto; }
-    .why-grid {
+    .brand-mark {
+      width: 36px;
+      height: 36px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 0; margin-top: 48px;
-      border: 1px solid var(--border);
-      border-radius: 4px; overflow: hidden;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--text);
+      color: #fff;
+      font-size: 14px;
     }
-    .why-item {
-      padding: 32px 28px;
-      border-right: 1px solid var(--border);
-      background: var(--card-bg);
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      flex-wrap: wrap;
     }
-    .why-item:last-child { border-right: none; }
-    .why-num {
-      font-family: 'Lora', serif;
-      font-size: 2rem; font-weight: 600;
-      color: var(--rust); line-height: 1; margin-bottom: 10px;
+    .nav-links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
     }
-    .why-item h4 {
-      font-size: 0.9rem; font-weight: 500; margin-bottom: 8px; color: var(--ink);
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--surface);
     }
-    .why-item p { color: var(--ink2); font-size: 0.84rem; line-height: 1.7; }
-
-    /* FOOTER */
-    footer {
-      padding: 48px 52px;
-      border-top: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 20px;
+    main {
+      max-width: var(--wrap);
+      margin: 0 auto;
+      padding: 84px 24px 72px;
     }
-    .footer-left {
-      font-family: 'Lora', serif;
-      font-size: 1rem; font-weight: 600; color: var(--ink);
+    .hero {
+      max-width: 760px;
+      margin-bottom: 36px;
     }
-    .footer-left span { color: var(--rust); font-style: italic; }
-    .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-    .footer-links a {
-      color: var(--ink3); text-decoration: none; font-size: 0.83rem;
-      letter-spacing: 0.03em; transition: color 0.2s;
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
     }
-    .footer-links a:hover { color: var(--rust); }
-    .footer-copy {
-      width: 100%; color: var(--ink3); font-size: 0.78rem;
-      font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.04em;
+    h1, h2, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.1;
+      letter-spacing: 0;
     }
-
-    @media (max-width: 640px) {
-      nav { padding: 16px 20px; }
-      .nav-links { gap: 20px; }
-      .hero, .tools-section, .why-section { padding-left: 20px; padding-right: 20px; }
-      footer { padding: 36px 20px; }
-      .why-item { border-right: none; border-bottom: 1px solid var(--border); }
-      .why-item:last-child { border-bottom: none; }
+    .lead {
+      color: var(--muted);
+      font-size: clamp(17px, 2.2vw, 20px);
+    }
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .option-card {
+      min-height: 300px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .18s, border-color .18s, box-shadow .18s;
+    }
+    .option-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(47, 111, 98, .45);
+      box-shadow: 0 18px 56px rgba(32, 33, 36, .12);
+    }
+    .tag {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-bottom: 18px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .option-card h2 {
+      margin-bottom: 10px;
+      font-size: clamp(26px, 4vw, 36px);
+      line-height: 1.2;
+    }
+    .option-card p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .card-link {
+      margin-top: 24px;
+      color: var(--accent-2);
+      font-weight: 800;
+    }
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .footer-inner {
+      max-width: var(--wrap);
+      margin: 0 auto;
+      padding: 30px 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-links a { text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 16px;
+      }
+      .nav-links { justify-content: flex-start; }
+      main { padding: 52px 16px 54px; }
+      .options { grid-template-columns: 1fr; }
+      .option-card { min-height: 240px; padding: 22px; }
+      .footer-inner { padding: 28px 16px; }
     }
   </style>
 </head>
 <body>
-
-<nav>
-  <a class="nav-logo" href="index.html">Kokoro<span>Flow</span></a>
-  <ul class="nav-links">
-    <li><a href="#tools">工具</a></li>
-    <li><a href="about.html">關於</a></li>
-    <li><a href="contact.html">聯絡</a></li>
-  </ul>
-</nav>
-
-<section class="hero">
-  <div class="hero-eyebrow">— 完全免費 · 無需註冊</div>
-  <h1>把雜事<br />處理掉，<br /><em>繼續去生活</em></h1>
-  <p class="hero-desc">KokoroFlow 是一個人做的小工具集。沒有廣告、不需要帳號，打開就能用。</p>
-  <a class="hero-cta" href="#tools">看看有什麼工具 →</a>
-</section>
-
-<section class="tools-section" id="tools">
-  <div class="section-eyebrow">Free Tools</div>
-  <h2 class="section-title">目前提供的工具</h2>
-  <p class="section-sub">都是自己用到覺得缺、才動手做的東西。</p>
-
-  <div class="tools-grid">
-
-    <a class="tool-card" href="https://qr.kokoroflow.net" target="_blank" rel="noopener">
-      <span class="tool-tag">中文版</span>
-      <h3>QR Code 產生器</h3>
-      <p>輸入網址或文字，秒出 QR Code，可以調顏色、調尺寸，直接下載。</p>
-      <div class="tool-arrow">打開來用 →</div>
-    </a>
-
-    <a class="tool-card" href="https://en-qr.kokoroflow.net" target="_blank" rel="noopener">
-      <span class="tool-tag">English</span>
-      <h3>QR Code Generator</h3>
-      <p>Type a URL or any text, get a QR code instantly. Free, no sign-up, just works.</p>
-      <div class="tool-arrow">Use it →</div>
-    </a>
-
-    <!-- 修改了這裡的 href -->
-    <a class="tool-card" href="https://www.kokoroflow.net/7tools.html" target="_blank" rel="noopener">
-      <span class="tool-tag">工具箱</span>
-      <h3>七種常用工具箱</h3>
-      <p>文字處理、單位換算、計算……七個高頻小工具，集中在一頁，不用到處找。</p>
-      <div class="tool-arrow">打開來用 →</div>
-    </a>
-
-    <a class="tool-card" href="https://food.kokoroflow.net" target="_blank" rel="noopener">
-      <span class="tool-tag">決策工具</span>
-      <h3>今天吃什麼？</h3>
-      <p>選食困難的人專用。告訴它你的條件，它幫你定。少一個要做的決定。</p>
-      <div class="tool-arrow">打開來用 →</div>
-    </a>
-
-    <a class="tool-card" href="https://quickset.kokoroflow.net" target="_blank" rel="noopener">
-      <span class="tool-tag">效率工具</span>
-      <h3>MyQuickSet</h3>
-      <p>另一組七種實用工具，一頁搞定，不用在分頁之間跳來跳去。</p>
-      <div class="tool-arrow">打開來用 →</div>
-    </a>
-
-  </div>
-</section>
-
-<section class="why-section">
-  <div class="why-inner">
-    <div class="section-eyebrow">Why KokoroFlow</div>
-    <h2 class="section-title">做這個的原因很簡單</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-num">免費</div>
-        <h4>永遠不收費</h4>
-        <p>不需要訂閱、不需要信用卡，現在免費、以後也免費。</p>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="https://www.kokoroflow.net/"><span class="brand-mark">KF</span><span>KokoroFlow</span></a>
+      <div class="nav-links">
+        <a href="https://www.kokoroflow.net/7tools.html">工具箱</a>
+        <a href="https://www.kokoroflow.net/jasiami.html">今天吃什麼</a>
       </div>
-      <div class="why-item">
-        <div class="why-num">零</div>
-        <h4>不用辦帳號</h4>
-        <p>打開瀏覽器就能用，沒有表單要填，也不收你的個資。</p>
-      </div>
-      <div class="why-item">
-        <div class="why-num">5+</div>
-        <h4>持續在加</h4>
-        <p>自己覺得好用才做進去，每一個都有真實的使用場景。</p>
-      </div>
-      <div class="why-item">
-        <div class="why-num">30yr</div>
-        <h4>一個人做的</h4>
-        <p>背後是一位有三十年資訊技術背景的工程師，一個人設計、一個人維護。</p>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">KokoroFlow Tools</p>
+      <h1>兩個入口，快速完成日常小任務。</h1>
+      <p class="lead">選擇常用工具箱進行計算與轉換，或打開今天吃什麼，讓餐點選擇更輕鬆。手機與電腦都能順手使用。</p>
+    </section>
+
+    <section class="options" aria-label="主要工具入口">
+      <a class="option-card" href="https://www.kokoroflow.net/7tools.html">
+        <div>
+          <span class="tag">Utility Toolkit</span>
+          <h2>常用工具箱</h2>
+          <p>集合隨機選擇、百分比、貸款、BMI、密碼、字數、日期差、單位換算、小費分帳與色碼轉換。</p>
+        </div>
+        <span class="card-link">開啟工具箱</span>
+      </a>
+
+      <a class="option-card" href="https://www.kokoroflow.net/jasiami.html">
+        <div>
+          <span class="tag">Meal Picker</span>
+          <h2>今天吃什麼？</h2>
+          <p>早餐、午餐、晚餐都能依分類抽選，也可以加入自訂餐點，快速決定下一餐。</p>
+        </div>
+        <span class="card-link">開始選餐</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© 2026 KokoroFlow. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="https://www.kokoroflow.net/7tools.html">常用工具箱</a>
+        <a href="https://www.kokoroflow.net/jasiami.html">今天吃什麼</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section style="max-width: 1100px; margin: 40px auto; padding: 0 52px; text-align: center; overflow: hidden;">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7127191372584167"
-       data-ad-slot="請填入您的廣告單元ID"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</section>
-
-<footer>
-  <div class="footer-left">Kokoro<span>Flow</span></div>
-  <div class="footer-links">
-    <a href="index.html">首頁</a>
-    <a href="about.html">關於我們</a>
-    <a href="privacy.html">隱私權政策</a>
-    <a href="contact.html">聯絡我們</a>
-  </div>
-  <div class="footer-copy">© 2025 KokoroFlow. All rights reserved.</div>
-</footer>
-
+  </footer>
 </body>
 </html>

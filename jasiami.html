@@ -1,494 +1,223 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>今天吃什麼？— 台灣選餐小幫手</title>
-<meta name="description" content="選不好吃什麼？早餐、午餐、晚餐一鍵決定！中式飯麵湯、西式餐點，台灣在地美食清單，還可自訂輸入或匯入 Excel，隨機幫你選出答案。">
-<script type='text/javascript' src='https://private-us-east-1.manuscdn.com/rwRew3yXOsNSPhNu0SXDMAf6NbRm8ui7_9J8RKiW1CSkfJ64AW57M1B7ujiXOc2z9Tzv2AKZ4hehPAIFs5QPG9tUOrJ0xKNfD6SRjnRG46ZjuyzsYy1t-A0TmC3XUpHE4wlh2DdN-RMhLBXfkRiAJTy6g_UB68DwByY9aptcGu2v09D2z5_lznKF9LzINVP9LDsCWUaEI3xSj6OX_aPA11JRk45GAHED8dN0E4jMFaI2IIjTvF5DWwJmAI9U_iB0bAhMU364pg2Cc5y7NIE2Xo75Va9-ndMMQAd7Otv2WJyZbMzUcU7oJrKNaZABequzEsqnlWE7TB53OFDCiOh-IKF4CnbHfMieHUlBO1KpR4zLvK-dc010xALchxBQ4L2t4R5maNCqdALZ9rTOdxANKuzRNy30EbDL2i7LnvPQBkzY15T8BWmd9695R_eAC2Vxhs0inAjkK7BEYtr7gIYiuR1lO3FrtWZrnt2FxQdCNqaQeioP0LmrNUKGy8yHINSFQt_8ZzwaN51aPCqGa7SXUVtdnlfMPkRPqGAV1RWETDtNjpMADn_8wDd3hlb-J3VPP1cdEJTck1Qur7SEXo0Cvuvzz5KFXhTUfrjiCnzHHnnnhzRPgkRprAT4rR9-yGC_FBUTdOhMfT5e9M27M3FrQ4KdJdnuMfHammAUFfVevXJR_7-Wpx6rNSPnuR-sSoT4JrZR0ZuhyLIWkHb8OyweXfkjAnu_hMkrZQySSJu1evwgK0ScczhHEEwq2uJEu3GL5aIJCMyCkTdEP6C9Dtclc1rznGonqH6meV6OB9lMIZOKifglM-zUnMpUHjtUXbkHDAgvczyO9WOibo2oyBPtpMF1hVgDzdocrfDwvMEcO5D6UfyzhunVIt3fW9ftGrmAFZQvf8sgNEP9dp_k_fbgoS9WB0wK16qj_efaHGLI5TT55FUW_FhvtPTtTpjWSu7s-E3mTC2dToQjBSbC-TUTe2kntvT0KLBL4T6T8A_rZuFdUL13dYzj_UtK4ye6gf0YWxHltlUXp9WZstbfLhEbpXiV1fjFlc8Dty0CSSOcTBnJicTCmXoNmGyvuo9Le5cFtsr7WlYe7QXT6XspkJEC9nyIL4eHcz22pofdTNBs7aqqENNYTN6Sgaauq9-qkhKMigr5EmhEzaKwLlGDJtme2tj1A9fLX-1GMJrxKQ9ijElz0-3osy5rvj7DP93mCo0PIea0YC182665ahEDln_oOZa8ejvEuSzwbOhZxCdM0nIA4TbH5B5NxlEMpaqNJcwALUCWotuUqgsBRYx26BKfoQJTuK9P2a_PQphtcWQGJJYeh7qXeVYuQZFot76I20fW--N5M8MaXW35Xuy2a46z7xZpgW7I3r9VazzAr16wws9mGNYmx_zZQz8TC94eZcgCVjv0Kyl-GZGV1Q7Pi3av51ORRppGBwckkimfX-Dm-EZ8mTdNxJZeJeM1Ed5QeWKOhJblu3Hfq9TjigTPqI1MvCkWUOtLAvCAu2Nnh8LPYxIPZBbovx2FDdAPnSGfnKZbxZtPhsA5w1HEzsW68SzpcKQ1ax0H2yeUY2KwbS06Gn8nCZbt3VL-5QsyBCH4VpiD_DthhwALus6_5raQSFM'></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7127191372584167" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  /* ── 色彩變數：溫暖奶油 × 手感木質 ── */
-  :root {
-    --bg:          #FAF8F4;
-    --surface:     #FFFFFF;
-    --surface2:    #F5F2EC;
-    --border:      #E2DDD5;
-    --border-soft: #EDE9E2;
-    --text:        #2C2416;
-    --muted:       #7A6E60;
-    --accent:      #C0622A;
-    --accent-light:#FDF0E8;
-    --accent-dark: #A04E1E;
-    --accent2:     #4A7C59;
-    --radius:      14px;
-    --radius-sm:   8px;
-    --shadow:      0 2px 8px rgba(80,50,20,.07), 0 1px 3px rgba(80,50,20,.05);
-    --shadow-card: 0 4px 16px rgba(80,50,20,.09);
-    --font:        'Noto Sans TC', system-ui, -apple-system, sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>今天吃什麼？｜台灣選餐幫手</title>
+  <meta name="description" content="今天吃什麼？台灣選餐幫手提供早餐、午餐、晚餐隨機選擇，可依中式、西式、飯類、麵類、湯品鍋物分類抽選，也能加入自訂餐點。">
+  <link rel="canonical" href="https://www.kokoroflow.net/jasiami.html">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7127191372584167" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
     :root {
-      --bg: #1C1812; --surface: #252018; --surface2: #2E2820;
-      --border: #3A3328; --border-soft: #322C24;
-      --text: #F0EBE1; --muted: #9A8E7E;
-      --accent: #E08050; --accent-light: #2A1C12; --accent-dark: #F0A070;
+      --bg:#f7f4ee; --surface:#fffdf8; --surface-2:#eee7dc; --text:#202124; --muted:#5f6368;
+      --line:#ded7cc; --accent:#2f6f62; --accent-2:#b35a2a; --accent-soft:#e6f1ed;
+      --shadow:0 16px 50px rgba(32,33,36,.08); --radius:8px; --wrap:1040px;
     }
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    font-size: 15px;
-    line-height: 1.7;
-    min-height: 100vh;
-  }
-
-  .container { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-
-  /* ── Header ── */
-  header {
-    background: var(--surface);
-    border-bottom: 2px solid var(--border);
-    padding: 0 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .header-inner {
-    max-width: 880px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-  }
-  .logo {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .logo-icon {
-    width: 32px; height: 32px;
-    background: var(--accent);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px;
-  }
-  .logo span { color: var(--accent); }
-  
-  .back-link {
-    font-size: 13px;
-    color: var(--muted);
-    text-decoration: none;
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 6px 14px;
-    font-weight: 500;
-    transition: all .2s;
-  }
-  .back-link:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
-
-  /* ── Hero ── */
-  .hero {
-    padding: 50px 0 30px;
-    text-align: center;
-  }
-  .hero-emoji { font-size: 52px; margin-bottom: 12px; display: block; }
-  .hero h1 {
-    font-size: clamp(24px, 6vw, 36px);
-    font-weight: 700;
-    letter-spacing: -.5px;
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
-  .hero h1 em { color: var(--accent); font-style: normal; }
-  .hero p { color: var(--muted); font-size: 16px; max-width: 480px; margin: 0 auto; }
-
-  /* ── Quick Nav Buttons ── */
-  .quick-nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-  }
-  .nav-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: 24px;
-    padding: 10px 24px;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-    transition: all .2s;
-    box-shadow: var(--shadow);
-  }
-  .nav-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(192,98,42,.15);
-  }
-  .nav-btn span { font-size: 18px; }
-
-  /* ── AdSense Slots ── */
-  .ads-wrapper {
-    margin: 24px 0;
-    text-align: center;
-    background: var(--surface2);
-    border: 1px dashed var(--border);
-    border-radius: var(--radius-sm);
-    padding: 15px;
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .ads-label {
-    font-size: 11px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-
-  /* ── Meal Card ── */
-  .meal-card {
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    padding: 32px;
-    margin-bottom: 32px;
-    box-shadow: var(--shadow-card);
-    position: relative;
-    overflow: hidden;
-    scroll-margin-top: 80px; /* 跳轉時留出頂部間距 */
-  }
-  .meal-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2, #4A7C59));
-  }
-  .meal-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; border-bottom: 1px solid var(--border-soft); padding-bottom: 16px; }
-  .meal-card-icon { font-size: 32px; }
-  .meal-card-title { font-size: 22px; font-weight: 700; }
-  .meal-card-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
-
-  /* ── Style & Category Tabs ── */
-  .style-tabs { display: flex; border: 1.5px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; }
-  .style-tab { flex: 1; background: var(--bg); border: none; cursor: pointer; padding: 10px; font-size: 14px; font-weight: 600; color: var(--muted); transition: all .15s; font-family: var(--font); }
-  .style-tab.active { background: var(--accent); color: #fff; }
-  .style-tab:not(.active):hover { background: var(--accent-light); color: var(--accent); }
-
-  .cat-tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
-  .cat-tab { background: var(--bg); border: 1.5px solid var(--border); border-radius: 20px; padding: 6px 16px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; transition: all .15s; }
-  .cat-tab.active { background: var(--accent2); color: #fff; border-color: var(--accent2); }
-
-  /* ── Food List ── */
-  .section-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; display: block; }
-  .food-count { font-size: 11px; font-weight: 400; opacity: .7; }
-  .food-list-area { border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 18px; background: var(--surface2); min-height: 80px; margin-bottom: 20px; }
-  .food-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-  .food-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1.5px solid var(--border); border-radius: 20px; padding: 6px 14px; font-size: 14px; font-weight: 500; box-shadow: var(--shadow); }
-  .food-tag .del { cursor: pointer; color: var(--muted); font-size: 14px; }
-  .food-tag .del:hover { color: var(--accent); }
-
-  /* ── Input & Controls ── */
-  .add-row { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
-  .add-row input { flex: 1; min-width: 160px; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); font-size: 14px; outline: none; }
-  .add-row input:focus { border-color: var(--accent); }
-  
-  .pick-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 14px; background: var(--bg); border-radius: var(--radius-sm); border: 1.5px solid var(--border); }
-  .count-ctrl { display: flex; align-items: center; gap: 10px; }
-  .count-btn { width: 30px; height: 30px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--border); cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; transition: all .15s; }
-  .count-btn:hover { color: var(--accent); border-color: var(--accent); }
-
-  /* ── Buttons ── */
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent); color: #fff; border: none; border-radius: var(--radius-sm);
-    padding: 10px 20px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all .15s;
-  }
-  .btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
-  .btn-sm { padding: 8px 14px; font-size: 13px; }
-  .btn-ghost { background: var(--surface2); color: var(--muted); border: 1.5px solid var(--border); }
-  .btn-big { font-size: 18px; padding: 16px 40px; border-radius: 30px; width: 100%; justify-content: center; box-shadow: 0 6px 20px rgba(192,98,42,.25); }
-
-  /* ── Result ── */
-  .result-wrapper { margin-top: 24px; animation: popIn .45s cubic-bezier(.34,1.56,.64,1); }
-  .result-main { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color: #fff; border-radius: var(--radius); padding: 32px 24px; text-align: center; box-shadow: 0 8px 32px rgba(192,98,42,.25); }
-  .result-label { font-size: 14px; opacity: .85; margin-bottom: 10px; }
-  .result-food { font-size: clamp(32px, 8vw, 52px); font-weight: 700; letter-spacing: -.5px; }
-  .result-more { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; justify-content: center; }
-  .result-more-item { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.3); border-radius: var(--radius-sm); padding: 8px 18px; font-size: 15px; font-weight: 600; backdrop-filter: blur(4px); }
-
-  @keyframes popIn { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-  footer {
-    margin-top: 60px; padding: 40px 20px; text-align: center; border-top: 2px solid var(--border);
-    background: var(--surface); color: var(--muted); font-size: 13px;
-  }
-  footer a { color: var(--muted); text-decoration: none; margin: 0 10px; }
-  footer a:hover { color: var(--accent); }
-
-  @media (max-width: 600px) {
-    .hero { padding: 40px 0 20px; }
-    .meal-card { padding: 24px 20px; }
-    .nav-btn { padding: 8px 18px; font-size: 14px; }
-  }
-</style>
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:"Noto Sans TC",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--text); background:var(--bg); line-height:1.72; text-size-adjust:100%; }
+    a { color:inherit; }
+    .skip-link { position:absolute; left:16px; top:-48px; z-index:20; background:var(--text); color:#fff; padding:10px 14px; border-radius:6px; transition:top .2s; }
+    .skip-link:focus { top:16px; }
+    .site-header { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(222,215,204,.9); background:rgba(247,244,238,.94); backdrop-filter:blur(14px); }
+    .nav { max-width:var(--wrap); margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; white-space:nowrap; }
+    .brand-mark { width:36px; height:36px; display:grid; place-items:center; border-radius:8px; background:var(--text); color:#fff; font-size:14px; }
+    .nav-links { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-links a { min-height:40px; display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+    .nav-links a:hover { color:var(--text); background:var(--surface); }
+    main { max-width:var(--wrap); margin:0 auto; padding:64px 24px; }
+    .hero { max-width:760px; margin-bottom:28px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent); font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:18px; font-size:clamp(36px,6vw,64px); line-height:1.12; letter-spacing:0; }
+    .lead { color:var(--muted); font-size:clamp(17px,2.1vw,20px); }
+    .quick-nav { display:flex; flex-wrap:wrap; gap:8px; margin:26px 0; }
+    .quick-nav a { min-height:42px; display:inline-flex; align-items:center; padding:8px 14px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--muted); text-decoration:none; font-weight:800; }
+    .quick-nav a:hover { color:var(--text); border-color:var(--accent); }
+    .ad-wrap { margin:30px 0; padding:14px; min-height:112px; display:grid; place-items:center; border:1px dashed var(--line); border-radius:var(--radius); background:var(--surface-2); overflow:hidden; }
+    .ad-label { margin-bottom:8px; color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; text-align:center; }
+    .meal-grid { display:grid; gap:18px; }
+    .meal-card { scroll-margin-top:96px; padding:26px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow); }
+    .meal-head { display:flex; justify-content:space-between; gap:16px; align-items:start; padding-bottom:18px; margin-bottom:18px; border-bottom:1px solid var(--line); }
+    .meal-head h2 { margin-bottom:6px; font-size:28px; line-height:1.2; }
+    .meal-head p { margin-bottom:0; color:var(--muted); }
+    .badge { padding:5px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-weight:800; font-size:12px; white-space:nowrap; }
+    .tabs, .cat-tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+    .tab, .cat-tab { min-height:40px; border:1px solid var(--line); border-radius:999px; padding:8px 13px; background:#fff; color:var(--muted); font:inherit; font-weight:800; cursor:pointer; }
+    .tab.active, .cat-tab.active { color:#fff; background:var(--text); border-color:var(--text); }
+    .list-box { margin:14px 0; padding:16px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface-2); }
+    .list-meta { margin-bottom:10px; color:var(--muted); font-size:14px; font-weight:700; }
+    .food-tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .food-tag { padding:7px 11px; border:1px solid var(--line); border-radius:999px; background:var(--surface); font-weight:700; font-size:14px; }
+    .controls { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; margin:14px 0; }
+    input { width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--text); font:inherit; }
+    input:focus { outline:3px solid var(--accent-soft); border-color:var(--accent); }
+    button { min-height:44px; padding:10px 16px; border:0; border-radius:999px; background:var(--text); color:#fff; font:inherit; font-weight:800; cursor:pointer; }
+    button.secondary { background:var(--surface-2); color:var(--text); border:1px solid var(--line); }
+    .pick-row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; margin-top:14px; padding:14px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; }
+    .stepper { display:flex; align-items:center; gap:8px; font-weight:800; }
+    .stepper button { width:38px; padding:0; border-radius:50%; }
+    .result { margin-top:16px; padding:22px; border-radius:var(--radius); background:linear-gradient(135deg,var(--accent),#244f46); color:#fff; text-align:center; }
+    .result-label { margin-bottom:8px; opacity:.85; font-weight:700; }
+    .result-main { font-size:clamp(28px,7vw,46px); line-height:1.2; font-weight:800; }
+    .result-more { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .result-more span { padding:7px 10px; border-radius:999px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); }
+    .site-footer { border-top:1px solid var(--line); background:var(--surface); }
+    .footer-inner { max-width:var(--wrap); margin:0 auto; padding:34px 24px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    .footer-links { display:flex; gap:16px; flex-wrap:wrap; }
+    .footer-links a { text-decoration:none; }
+    @media (max-width:640px) {
+      .nav { align-items:flex-start; flex-direction:column; padding:12px 16px; }
+      .nav-links { justify-content:flex-start; }
+      main { padding:42px 16px; }
+      .meal-card { padding:20px; }
+      .meal-head { flex-direction:column; }
+      .controls { grid-template-columns:1fr; }
+      .pick-row { align-items:stretch; flex-direction:column; }
+      .footer-inner { padding:28px 16px; }
+    }
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="https://www.kokoroflow.net/"><span class="brand-mark">KF</span><span>KokoroFlow</span></a>
+      <div class="nav-links">
+        <a href="https://www.kokoroflow.net/">首頁</a>
+        <a href="7tools.html">工具箱</a>
+        <a href="#breakfast">早餐</a>
+        <a href="#lunch">午餐</a>
+        <a href="#dinner">晚餐</a>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <div class="header-inner">
-    <a href="jasiami.html" class="logo">
-      <div class="logo-icon">🍱</div>
-      今天<span>吃什麼？</span>
-    </a>
-    <a href="https://www.kokoroflow.net/7tools.html" class="back-link">← 萬用工具箱</a>
-  </div>
-</header>
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">Taiwan Meal Picker</p>
+      <h1>今天吃什麼？讓選擇變輕鬆。</h1>
+      <p class="lead">早餐、午餐、晚餐都可以依分類抽選。也能加入自己的餐點清單，適合一個人、家庭或同事聚餐時快速決定。</p>
+    </section>
 
-<div class="container">
+    <nav class="quick-nav" aria-label="餐別快速導覽">
+      <a href="#breakfast">早餐</a><a href="#lunch">午餐</a><a href="#dinner">晚餐</a>
+    </nav>
 
-  <section class="hero">
-    <span class="hero-emoji">🤔</span>
-    <h1>今天吃什麼？<em>台灣選餐幫手</em></h1>
-    <p>選不好沒關係，讓我幫你決定！好的生活應該從輕鬆選出一頓好午餐開始。</p>
-  </section>
-
-  <!-- ── Quick Nav Buttons ── -->
-  <div class="quick-nav">
-    <a href="#card-breakfast" class="nav-btn"><span>🌅</span> 早餐</a>
-    <a href="#card-lunch" class="nav-btn"><span>☀️</span> 午餐</a>
-    <a href="#card-dinner" class="nav-btn"><span>🌙</span> 晚餐</a>
-  </div>
-
-  <!-- ── Ad Slot 1: Top Banner ── -->
-  <div class="ads-wrapper">
-    <div class="ads-label">ADVERTISEMENT</div>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7127191372584167"
-         data-ad-slot="YOUR_AD_SLOT_MEAL_1"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <!-- 早餐 -->
-  <div class="meal-card" id="card-breakfast">
-    <div class="meal-card-header">
-      <span class="meal-card-icon">🌅</span>
+    <div class="ad-wrap" aria-label="廣告">
       <div>
-        <div class="meal-card-title">早餐</div>
-        <div class="meal-card-sub">一天的開始，吃對了精神好</div>
+        <div class="ad-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7127191372584167" data-ad-slot="REPLACE_WITH_AD_SLOT_MEAL_TOP" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
     </div>
-    <div id="breakfast-ui"></div>
-  </div>
 
-  <!-- ── Ad Slot 2: Middle Section ── -->
-  <div class="ads-wrapper">
-    <div class="ads-label">SPONSORED</div>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7127191372584167"
-         data-ad-slot="YOUR_AD_SLOT_MEAL_2"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+    <div class="meal-grid">
+      <section class="meal-card" id="breakfast"><div class="meal-head"><div><h2>早餐</h2><p>從早餐店、傳統早點到簡單西式，快速開始一天。</p></div><span class="badge">Morning</span></div><div id="breakfast-ui"></div></section>
+      <section class="meal-card" id="lunch"><div class="meal-head"><div><h2>午餐</h2><p>適合上班日、外食族與不知道要吃什麼的中午。</p></div><span class="badge">Lunch</span></div><div id="lunch-ui"></div></section>
 
-  <!-- 午餐 -->
-  <div class="meal-card" id="card-lunch">
-    <div class="meal-card-header">
-      <span class="meal-card-icon">☀️</span>
+      <div class="ad-wrap" aria-label="廣告">
+        <div>
+          <div class="ad-label">Sponsored</div>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7127191372584167" data-ad-slot="REPLACE_WITH_AD_SLOT_MEAL_MIDDLE" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+      </div>
+
+      <section class="meal-card" id="dinner"><div class="meal-head"><div><h2>晚餐</h2><p>下班後不想再做決定，就讓清單幫你挑一個。</p></div><span class="badge">Dinner</span></div><div id="dinner-ui"></div></section>
+    </div>
+
+    <div class="ad-wrap" aria-label="廣告">
       <div>
-        <div class="meal-card-title">午餐</div>
-        <div class="meal-card-sub">中午的補給，選得好下午有活力</div>
+        <div class="ad-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7127191372584167" data-ad-slot="REPLACE_WITH_AD_SLOT_MEAL_BOTTOM" data-ad-format="autorelaxed"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
     </div>
-    <div id="lunch-ui"></div>
-  </div>
+  </main>
 
-  <!-- 晚餐 -->
-  <div class="meal-card" id="card-dinner">
-    <div class="meal-card-header">
-      <span class="meal-card-icon">🌙</span>
-      <div>
-        <div class="meal-card-title">晚餐</div>
-        <div class="meal-card-sub">今晚吃什麼？輕鬆一選，不再為難</div>
-      </div>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© 2026 KokoroFlow. All rights reserved.</div>
+      <div class="footer-links"><a href="https://www.kokoroflow.net/">首頁</a><a href="7tools.html">常用工具箱</a><a href="https://www.kokoroflow.net/privacy.html">隱私權政策</a></div>
     </div>
-    <div id="dinner-ui"></div>
-  </div>
-
-  <!-- ── Ad Slot 3: Above Footer ── -->
-  <div style="margin-top: 40px; text-align: center;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7127191372584167"
-         data-ad-slot="YOUR_AD_SLOT_MEAL_3"
-         data-ad-format="autorelaxed"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <footer>
-    <div style="margin-bottom: 15px;">
-      <a href="https://www.kokoroflow.net/7tools.html">🔧 萬用工具箱</a>
-      <a href="#">關於我們</a>
-      <a href="#">隱私政策</a>
-      <a href="#">聯絡我們</a>
-    </div>
-    <p>© 2025 今天吃什麼？· 所有資料均在瀏覽器本地執行，不儲存個人資料</p>
   </footer>
 
-</div>
-
-<script>
-/* =====================================================
-   資料：台灣在地美食清單
-===================================================== */
-const FOOD_DB = {
-  breakfast: {
-    chinese: {
-      rice:  ['菜頭粥','廣東粥','鹹粥','肉燥飯糰','地瓜粥','南瓜粥','皮蛋瘦肉粥'],
-      noodle:['米粉湯','麵線糊','油麵加蛋','燒餅油條','炒米粉','湯米苔目','泡麵'],
-      soup:  ['豬血湯','貢丸湯','味噌湯','鹹豆漿']
-    },
-    western: ['總匯三明治','蛋餅','漢堡','熱狗堡','可頌','貝果','鬆餅','法式吐司','優格碗']
-  },
-  lunch: {
-    chinese: {
-      rice:  ['排骨飯','控肉飯','雞腿飯','三寶飯','魯肉飯','炒飯','海南雞飯','麻婆豆腐飯'],
-      noodle:['牛肉麵','炸醬麵','擔擔麵','陽春麵','意麵','蚵仔麵線','炒米粉','切仔麵'],
-      soup:  ['苦瓜排骨湯','筍絲蹄膀湯','酸辣湯','餛飩湯','四神湯']
-    },
-    western: ['義大利麵','披薩','漢堡','焗烤飯','凱薩沙拉','燉飯','薯條雞塊','帕尼尼']
-  },
-  dinner: {
-    chinese: {
-      rice:  ['薑絲魚片粥','白飯配三菜一湯','鹽水雞飯','火雞肉飯','豬腳飯','蚵仔煎飯','香腸炒飯'],
-      noodle:['蚵仔麵線','擔仔麵','麻油雞麵線','紅燒牛肉麵','什錦炒麵','乾拌麵','烏龍麵'],
-      soup:  ['麻油雞湯','薑母鴨','羊肉爐','臭豆腐鍋','砂鍋魚頭','酸菜白肉鍋','麻辣鍋']
-    },
-    western: ['牛排','義大利麵','燉牛肉','烤雞腿','焗烤千層麵','BBQ 豬肋排','義式燉飯','希臘沙拉']
-  }
-};
-
-const state = {
-  breakfast: { style: 'chinese', cat: 'rice', custom: { rice:[], noodle:[], soup:[], western:[] }, pickCount: 1 },
-  lunch:     { style: 'chinese', cat: 'rice', custom: { rice:[], noodle:[], soup:[], western:[] }, pickCount: 1 },
-  dinner:    { style: 'chinese', cat: 'rice', custom: { rice:[], noodle:[], soup:[], western:[] }, pickCount: 1 },
-};
-
-const MEAL_NAMES = { breakfast:'早餐', lunch:'午餐', dinner:'晚餐' };
-const CAT_NAMES = { rice:'飯類', noodle:'麵類', soup:'湯品鍋物', western:'西式' };
-
-function getCurrentList(meal) {
-  const s = state[meal];
-  if (s.style === 'western') return [...FOOD_DB[meal].western, ...s.custom.western];
-  return [...(FOOD_DB[meal].chinese[s.cat] || []), ...(s.custom[s.cat] || [])];
-}
-
-function renderMeal(meal) {
-  const s = state[meal];
-  const isChinese = s.style === 'chinese';
-  const list = getCurrentList(meal);
-  const container = document.getElementById(`${meal}-ui`);
-
-  container.innerHTML = `
-    <div class="style-tabs">
-      <button class="style-tab ${isChinese?'active':''}" onclick="setStyle('${meal}','chinese')">🥢 中式</button>
-      <button class="style-tab ${!isChinese?'active':''}" onclick="setStyle('${meal}','western')">🍴 西式</button>
-    </div>
-
-    ${isChinese ? `
-    <div class="cat-tabs">
-      <button class="cat-tab ${s.cat==='rice'?'active':''}" onclick="setCat('${meal}','rice')">🍚 飯類</button>
-      <button class="cat-tab ${s.cat==='noodle'?'active':''}" onclick="setCat('${meal}','noodle')">🍜 麵類</button>
-      <button class="cat-tab ${s.cat==='soup'?'active':''}" onclick="setCat('${meal}','soup')">🥘 湯品鍋物</button>
-    </div>` : ''}
-
-    <span class="section-label">美食清單 <span class="food-count">（共 ${list.length} 項）</span></span>
-    <div class="food-list-area">
-      <div class="food-tags">${list.map((f, i) => `<span class="food-tag">${f}</span>`).join('')}</div>
-    </div>
-
-    <div class="add-row">
-      <input type="text" id="add-${meal}" placeholder="新增自訂食物..." onkeydown="if(event.key==='Enter')addCustom('${meal}')">
-      <button class="btn btn-sm" onclick="addCustom('${meal}')">＋ 新增</button>
-    </div>
-
-    <div class="pick-controls">
-      <span style="font-size:14px;font-weight:600">幫我選</span>
-      <div class="count-ctrl">
-        <button class="count-btn" onclick="changeCount('${meal}',-1)">－</button>
-        <span class="count-num" id="cnt-${meal}">${s.pickCount}</span>
-        <button class="count-btn" onclick="changeCount('${meal}',1)">＋</button>
-      </div>
-      <span style="font-size:14px;font-weight:600">個</span>
-    </div>
-
-    <button class="btn btn-big" onclick="pickMeal('${meal}')">🎲 幫我決定 ${MEAL_NAMES[meal]}！</button>
-    <div id="result-${meal}"></div>
-  `;
-}
-
-function setStyle(meal, style) { state[meal].style = style; renderMeal(meal); }
-function setCat(meal, cat) { state[meal].cat = cat; renderMeal(meal); }
-function changeCount(meal, delta) { state[meal].pickCount = Math.max(1, Math.min(3, state[meal].pickCount + delta)); document.getElementById(`cnt-${meal}`).textContent = state[meal].pickCount; }
-
-function addCustom(meal) {
-  const input = document.getElementById(`add-${meal}`);
-  const val = input.value.trim();
-  if (!val) return;
-  const cat = state[meal].style === 'western' ? 'western' : state[meal].cat;
-  state[meal].custom[cat].push(val);
-  input.value = '';
-  renderMeal(meal);
-}
-
-function pickMeal(meal) {
-  const list = getCurrentList(meal);
-  const n = Math.min(state[meal].pickCount, list.length);
-  const picks = [...list].sort(() => Math.random() - 0.5).slice(0, n);
-  
-  let html = `<div class="result-wrapper"><div class="result-main">`;
-  html += `<div class="result-label">🎉 ${MEAL_NAMES[meal]}就吃這個！</div>`;
-  html += `<div class="result-food">${picks[0]}</div>`;
-  if (n > 1) {
-    html += `<div class="result-more">`;
-    picks.slice(1).forEach((p, i) => html += `<div class="result-more-item">備選: ${p}</div>`);
-    html += `</div>`;
-  }
-  html += `</div></div>`;
-  document.getElementById(`result-${meal}`).innerHTML = html;
-}
-
-renderMeal('breakfast');
-renderMeal('lunch');
-renderMeal('dinner');
-</script>
-
+  <script>
+    const FOOD_DB = {
+      breakfast: {
+        chinese: {
+          rice: ['飯糰','蛋餅','蘿蔔糕','肉鬆飯糰','鮪魚飯糰','蔥抓餅','燒餅油條'],
+          noodle: ['鐵板麵','鍋燒意麵','米粉湯','陽春麵','乾拌麵','肉羹麵'],
+          soup: ['豆漿配燒餅','鹹豆漿','玉米濃湯','蛋花湯']
+        },
+        western: ['三明治','吐司','漢堡','貝果','可頌','沙拉盒','優格燕麥','鬆餅','咖啡配麵包']
+      },
+      lunch: {
+        chinese: {
+          rice: ['滷肉飯','雞肉飯','排骨便當','雞腿便當','燒臘飯','咖哩飯','控肉飯','炒飯'],
+          noodle: ['牛肉麵','乾麵','餛飩麵','麻醬麵','炒麵','鍋燒麵','涼麵'],
+          soup: ['水餃酸辣湯','火鍋','關東煮','肉羹湯','貢丸湯']
+        },
+        western: ['義大利麵','燉飯','漢堡','披薩','沙拉','烤雞餐盒','潛艇堡','墨西哥捲']
+      },
+      dinner: {
+        chinese: {
+          rice: ['熱炒配白飯','海南雞飯','石鍋拌飯','日式丼飯','鐵板燒','便當','粥品'],
+          noodle: ['拉麵','烏龍麵','炒泡麵','拌麵','越南河粉','擔仔麵'],
+          soup: ['個人火鍋','麻辣鍋','薑母鴨','羊肉爐','酸菜白肉鍋','砂鍋魚頭']
+        },
+        western: ['牛排','義大利麵','披薩','烤雞','BBQ','焗烤飯','漢堡排','沙拉碗']
+      }
+    };
+    const state = {
+      breakfast:{style:'chinese',cat:'rice',custom:{rice:[],noodle:[],soup:[],western:[]},pickCount:1},
+      lunch:{style:'chinese',cat:'rice',custom:{rice:[],noodle:[],soup:[],western:[]},pickCount:1},
+      dinner:{style:'chinese',cat:'rice',custom:{rice:[],noodle:[],soup:[],western:[]},pickCount:1}
+    };
+    const mealNames = { breakfast:'早餐', lunch:'午餐', dinner:'晚餐' };
+    const catNames = { rice:'飯類', noodle:'麵類', soup:'湯品鍋物', western:'西式' };
+    function currentList(meal){ const s=state[meal]; return s.style==='western' ? [...FOOD_DB[meal].western,...s.custom.western] : [...FOOD_DB[meal].chinese[s.cat],...s.custom[s.cat]]; }
+    function renderMeal(meal){
+      const s=state[meal], isChinese=s.style==='chinese', list=currentList(meal);
+      document.getElementById(`${meal}-ui`).innerHTML = `
+        <div class="tabs">
+          <button class="tab ${isChinese?'active':''}" onclick="setStyle('${meal}','chinese')">中式</button>
+          <button class="tab ${!isChinese?'active':''}" onclick="setStyle('${meal}','western')">西式</button>
+        </div>
+        ${isChinese ? `<div class="cat-tabs">
+          <button class="cat-tab ${s.cat==='rice'?'active':''}" onclick="setCat('${meal}','rice')">飯類</button>
+          <button class="cat-tab ${s.cat==='noodle'?'active':''}" onclick="setCat('${meal}','noodle')">麵類</button>
+          <button class="cat-tab ${s.cat==='soup'?'active':''}" onclick="setCat('${meal}','soup')">湯品鍋物</button>
+        </div>` : ''}
+        <div class="list-box">
+          <div class="list-meta">目前清單：${isChinese ? catNames[s.cat] : catNames.western}，共 ${list.length} 個選項</div>
+          <div class="food-tags">${list.map(food => `<span class="food-tag">${food}</span>`).join('')}</div>
+        </div>
+        <div class="controls">
+          <input type="text" id="add-${meal}" placeholder="新增自訂餐點，例如：鹽酥雞" onkeydown="if(event.key==='Enter')addCustom('${meal}')">
+          <button onclick="addCustom('${meal}')">新增</button>
+        </div>
+        <div class="pick-row">
+          <div class="stepper"><span>抽出數量</span><button onclick="changeCount('${meal}',-1)">-</button><span id="cnt-${meal}">${s.pickCount}</span><button onclick="changeCount('${meal}',1)">+</button></div>
+          <button onclick="pickMeal('${meal}')">幫我決定 ${mealNames[meal]}</button>
+        </div>
+        <div id="result-${meal}"></div>`;
+    }
+    function setStyle(meal,style){ state[meal].style=style; renderMeal(meal); }
+    function setCat(meal,cat){ state[meal].cat=cat; renderMeal(meal); }
+    function changeCount(meal,delta){ state[meal].pickCount=Math.max(1,Math.min(3,state[meal].pickCount+delta)); document.getElementById(`cnt-${meal}`).textContent=state[meal].pickCount; }
+    function addCustom(meal){ const input=document.getElementById(`add-${meal}`); const val=input.value.trim(); if(!val) return; const key=state[meal].style==='western'?'western':state[meal].cat; state[meal].custom[key].push(val); input.value=''; renderMeal(meal); }
+    function pickMeal(meal){
+      const list=currentList(meal), n=Math.min(state[meal].pickCount,list.length), picks=[...list].sort(()=>Math.random()-.5).slice(0,n);
+      document.getElementById(`result-${meal}`).innerHTML = `<div class="result"><div class="result-label">${mealNames[meal]}就吃這個</div><div class="result-main">${picks[0]}</div>${picks.length>1?`<div class="result-more">${picks.slice(1).map(p=>`<span>備選：${p}</span>`).join('')}</div>`:''}</div>`;
+    }
+    renderMeal('breakfast'); renderMeal('lunch'); renderMeal('dinner');
+  </script>
 </body>
 </html>
