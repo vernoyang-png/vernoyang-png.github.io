@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>KokoroFlow 常用工具箱｜10 個免費線上工具</title>
+  <meta name="description" content="KokoroFlow 常用工具箱提供隨機選擇、百分比、貸款、BMI、密碼、字數、日期差、單位換算、小費分帳與色碼轉換等免費線上工具。">
+  <link rel="canonical" href="https://www.kokoroflow.net/7tools.html">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7127191372584167" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f7f4ee; --surface:#fffdf8; --surface-2:#eee7dc; --text:#202124; --muted:#5f6368;
+      --line:#ded7cc; --accent:#2f6f62; --accent-2:#b35a2a; --accent-soft:#e6f1ed;
+      --warn:#fff4d8; --shadow:0 16px 50px rgba(32,33,36,.08); --radius:8px; --wrap:1160px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:"Noto Sans TC",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--text); background:var(--bg); line-height:1.72; text-size-adjust:100%; }
+    a { color:inherit; }
+    .skip-link { position:absolute; left:16px; top:-48px; z-index:20; background:var(--text); color:#fff; padding:10px 14px; border-radius:6px; transition:top .2s; }
+    .skip-link:focus { top:16px; }
+    .site-header { position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(222,215,204,.9); background:rgba(247,244,238,.94); backdrop-filter:blur(14px); }
+    .nav { max-width:var(--wrap); margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; white-space:nowrap; }
+    .brand-mark { width:36px; height:36px; display:grid; place-items:center; border-radius:8px; background:var(--text); color:#fff; font-size:14px; }
+    .nav-links { display:flex; align-items:center; justify-content:flex-end; gap:6px; flex-wrap:wrap; }
+    .nav-links a { min-height:40px; display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; color:var(--muted); text-decoration:none; font-size:14px; font-weight:500; }
+    .nav-links a:hover { color:var(--text); background:var(--surface); }
+    main { max-width:var(--wrap); margin:0 auto; padding:64px 24px; }
+    .hero { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:36px; align-items:center; margin-bottom:28px; }
+    .eyebrow { margin:0 0 14px; color:var(--accent); font-size:13px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:18px; font-size:clamp(36px,6vw,64px); line-height:1.12; letter-spacing:0; }
+    .lead { color:var(--muted); font-size:clamp(17px,2.1vw,20px); }
+    .summary { border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow); overflow:hidden; }
+    .summary div { padding:18px 20px; border-bottom:1px solid var(--line); }
+    .summary div:last-child { border-bottom:0; }
+    .summary strong { display:block; margin-bottom:4px; }
+    .summary span { color:var(--muted); font-size:14px; }
+    .ad-wrap { margin:30px 0; padding:14px; min-height:112px; display:grid; place-items:center; border:1px dashed var(--line); border-radius:var(--radius); background:var(--surface-2); overflow:hidden; }
+    .ad-label { margin-bottom:8px; color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; text-align:center; }
+    .tool-nav { display:flex; flex-wrap:wrap; gap:8px; margin:30px 0; }
+    .tool-nav a { min-height:40px; display:inline-flex; align-items:center; padding:8px 12px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--muted); text-decoration:none; font-weight:700; font-size:14px; }
+    .tool-nav a:hover { color:var(--text); border-color:var(--accent); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:start; }
+    .tool { scroll-margin-top:96px; padding:24px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow); }
+    .tool h2 { margin-bottom:8px; font-size:24px; line-height:1.25; }
+    .tool-desc { margin-bottom:18px; color:var(--muted); font-size:15px; }
+    .fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .field-full { grid-column:1 / -1; }
+    label { display:block; margin-bottom:6px; font-weight:700; font-size:14px; }
+    input, select, textarea { width:100%; min-height:44px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--text); font:inherit; }
+    textarea { min-height:116px; resize:vertical; }
+    input:focus, select:focus, textarea:focus { outline:3px solid var(--accent-soft); border-color:var(--accent); }
+    .button-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    button { min-height:44px; padding:10px 16px; border:0; border-radius:999px; background:var(--text); color:#fff; font:inherit; font-weight:800; cursor:pointer; }
+    button.secondary { background:var(--surface-2); color:var(--text); border:1px solid var(--line); }
+    button:hover { transform:translateY(-1px); }
+    .result { margin-top:16px; padding:16px; border-radius:8px; background:var(--accent-soft); color:#244f46; font-weight:700; word-break:break-word; }
+    .result small { display:block; margin-top:6px; color:var(--muted); font-weight:500; }
+    .swatch { width:100%; height:50px; border:1px solid var(--line); border-radius:8px; background:#2f6f62; }
+    .site-footer { border-top:1px solid var(--line); background:var(--surface); }
+    .footer-inner { max-width:var(--wrap); margin:0 auto; padding:34px 24px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    .footer-links { display:flex; gap:16px; flex-wrap:wrap; }
+    .footer-links a { text-decoration:none; }
+    @media (max-width:920px) { .hero,.grid { grid-template-columns:1fr; } }
+    @media (max-width:640px) {
+      .nav { align-items:flex-start; flex-direction:column; padding:12px 16px; }
+      .nav-links { justify-content:flex-start; }
+      main { padding:42px 16px; }
+      .fields { grid-template-columns:1fr; }
+      .tool { padding:20px; }
+      .footer-inner { padding:28px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="主要導覽">
+      <a class="brand" href="https://www.kokoroflow.net/"><span class="brand-mark">KF</span><span>KokoroFlow</span></a>
+      <div class="nav-links">
+        <a href="https://www.kokoroflow.net/">首頁</a>
+        <a href="#tools">工具</a>
+        <a href="jasiami.html">今天吃什麼</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Free Utility Toolkit</p>
+        <h1>10 個常用線上工具，一頁快速完成。</h1>
+        <p class="lead">免註冊、手機與電腦都能使用。適合日常計算、文字整理、隨機決策與簡單轉換。</p>
+      </div>
+      <aside class="summary" aria-label="工具特色">
+        <div><strong>快速使用</strong><span>所有工具都在同一頁，不需要切換多個網站。</span></div>
+        <div><strong>適合手機</strong><span>按鈕與欄位保留足夠觸控空間。</span></div>
+        <div><strong>AdSense 友善</strong><span>廣告區塊放在自然段落，不遮擋操作。</span></div>
+      </aside>
+    </section>
+
+    <div class="ad-wrap" aria-label="廣告">
+      <div>
+        <div class="ad-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7127191372584167" data-ad-slot="REPLACE_WITH_AD_SLOT_TOP" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+
+    <nav class="tool-nav" aria-label="工具快速導覽" id="tools">
+      <a href="#picker">隨機選擇</a><a href="#percent">百分比</a><a href="#loan">貸款</a><a href="#bmi">BMI</a><a href="#password">密碼</a>
+      <a href="#wordcount">字數</a><a href="#datecalc">日期差</a><a href="#unit">單位換算</a><a href="#tip">小費分帳</a><a href="#color">色碼轉換</a>
+    </nav>
+
+    <div class="grid">
+      <section class="tool" id="picker">
+        <h2>隨機選擇器</h2><p class="tool-desc">貼上選項，一行一個，幫你隨機抽出結果。</p>
+        <label for="picker-input">選項</label><textarea id="picker-input">咖啡
+茶
+果汁
+氣泡水</textarea>
+        <div class="fields"><div><label for="picker-count">抽出數量</label><input id="picker-count" type="number" min="1" value="1"></div></div>
+        <div class="button-row"><button onclick="pickItems()">開始抽選</button><button class="secondary" onclick="shuffleSample()">範例選項</button></div>
+        <div class="result" id="picker-result">結果會顯示在這裡</div>
+      </section>
+
+      <section class="tool" id="percent">
+        <h2>百分比計算</h2><p class="tool-desc">計算折扣、成長率或某數值的百分比。</p>
+        <div class="fields">
+          <div><label for="percent-a">數值 A</label><input id="percent-a" type="number" value="1200"></div>
+          <div><label for="percent-b">數值 B / 百分比</label><input id="percent-b" type="number" value="15"></div>
+          <div class="field-full"><label for="percent-mode">計算模式</label><select id="percent-mode"><option value="of">A 的 B% 是多少</option><option value="rate">A 到 B 的變化率</option><option value="discount">A 打 B 折後價格</option></select></div>
+        </div>
+        <div class="button-row"><button onclick="calcPercent()">計算</button></div><div class="result" id="percent-result">請輸入數值後計算</div>
+      </section>
+
+      <section class="tool" id="loan">
+        <h2>貸款月付試算</h2><p class="tool-desc">以本金、年利率與年限估算每月付款。</p>
+        <div class="fields"><div><label for="loan-amount">貸款金額</label><input id="loan-amount" type="number" value="1000000"></div><div><label for="loan-rate">年利率 %</label><input id="loan-rate" type="number" value="2.2" step="0.01"></div><div><label for="loan-years">年限</label><input id="loan-years" type="number" value="20"></div></div>
+        <div class="button-row"><button onclick="calcLoan()">試算</button></div><div class="result" id="loan-result">月付金額會顯示在這裡</div>
+      </section>
+
+      <section class="tool" id="bmi">
+        <h2>BMI 計算</h2><p class="tool-desc">輸入身高體重，快速估算 BMI。</p>
+        <div class="fields"><div><label for="bmi-height">身高 cm</label><input id="bmi-height" type="number" value="170"></div><div><label for="bmi-weight">體重 kg</label><input id="bmi-weight" type="number" value="65"></div></div>
+        <div class="button-row"><button onclick="calcBMI()">計算 BMI</button></div><div class="result" id="bmi-result">BMI 結果會顯示在這裡</div>
+      </section>
+    </div>
+
+    <div class="ad-wrap" aria-label="廣告">
+      <div>
+        <div class="ad-label">Sponsored</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7127191372584167" data-ad-slot="REPLACE_WITH_AD_SLOT_MIDDLE" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="tool" id="password">
+        <h2>密碼產生器</h2><p class="tool-desc">產生本機端隨機密碼，不會送出到伺服器。</p>
+        <div class="fields"><div><label for="pwd-length">長度</label><input id="pwd-length" type="number" min="8" max="64" value="16"></div><div><label for="pwd-symbols">包含符號</label><select id="pwd-symbols"><option value="yes">是</option><option value="no">否</option></select></div></div>
+        <div class="button-row"><button onclick="makePassword()">產生密碼</button><button class="secondary" onclick="copyText('password-result')">複製</button></div><div class="result" id="password-result">密碼會顯示在這裡</div>
+      </section>
+
+      <section class="tool" id="wordcount">
+        <h2>字數統計</h2><p class="tool-desc">統計中文字數、英文單字、字元與行數。</p>
+        <label for="word-input">文字</label><textarea id="word-input" oninput="countWords()">KokoroFlow 讓常用工具更好用。</textarea>
+        <div class="result" id="word-result">開始輸入文字後自動統計</div>
+      </section>
+
+      <section class="tool" id="datecalc">
+        <h2>日期差計算</h2><p class="tool-desc">計算兩個日期相差幾天。</p>
+        <div class="fields"><div><label for="date-start">開始日期</label><input id="date-start" type="date"></div><div><label for="date-end">結束日期</label><input id="date-end" type="date"></div></div>
+        <div class="button-row"><button onclick="calcDateDiff()">計算天數</button></div><div class="result" id="date-result">日期差會顯示在這裡</div>
+      </section>
+
+      <section class="tool" id="unit">
+        <h2>單位換算</h2><p class="tool-desc">公分/英吋、公斤/磅、公里/英里快速換算。</p>
+        <div class="fields"><div><label for="unit-value">數值</label><input id="unit-value" type="number" value="100"></div><div><label for="unit-mode">換算類型</label><select id="unit-mode"><option value="cm-in">公分 → 英吋</option><option value="in-cm">英吋 → 公分</option><option value="kg-lb">公斤 → 磅</option><option value="lb-kg">磅 → 公斤</option><option value="km-mi">公里 → 英里</option><option value="mi-km">英里 → 公里</option></select></div></div>
+        <div class="button-row"><button onclick="convertUnit()">換算</button></div><div class="result" id="unit-result">換算結果會顯示在這裡</div>
+      </section>
+
+      <section class="tool" id="tip">
+        <h2>小費與分帳</h2><p class="tool-desc">適合旅行或聚餐時快速估算每人應付金額。</p>
+        <div class="fields"><div><label for="tip-bill">帳單金額</label><input id="tip-bill" type="number" value="1200"></div><div><label for="tip-rate">小費 %</label><input id="tip-rate" type="number" value="10"></div><div><label for="tip-people">人數</label><input id="tip-people" type="number" min="1" value="3"></div></div>
+        <div class="button-row"><button onclick="calcTip()">計算</button></div><div class="result" id="tip-result">分帳結果會顯示在這裡</div>
+      </section>
+
+      <section class="tool" id="color">
+        <h2>色碼轉換</h2><p class="tool-desc">將 HEX 色碼轉為 RGB，並預覽顏色。</p>
+        <div class="fields"><div><label for="color-hex">HEX 色碼</label><input id="color-hex" type="text" value="#2f6f62"></div><div><label>顏色預覽</label><div class="swatch" id="color-swatch"></div></div></div>
+        <div class="button-row"><button onclick="convertColor()">轉換</button></div><div class="result" id="color-result">RGB 結果會顯示在這裡</div>
+      </section>
+    </div>
+
+    <div class="ad-wrap" aria-label="廣告">
+      <div>
+        <div class="ad-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7127191372584167" data-ad-slot="REPLACE_WITH_AD_SLOT_BOTTOM" data-ad-format="autorelaxed"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© 2026 KokoroFlow. All rights reserved.</div>
+      <div class="footer-links"><a href="https://www.kokoroflow.net/">首頁</a><a href="jasiami.html">今天吃什麼</a><a href="https://www.kokoroflow.net/privacy.html">隱私權政策</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const $ = id => document.getElementById(id);
+    const money = n => new Intl.NumberFormat('zh-TW', { maximumFractionDigits: 0 }).format(n);
+    function nums(id){ return Number($(id).value) || 0; }
+    function pickItems(){ const items=$('picker-input').value.split(/\n|,/).map(s=>s.trim()).filter(Boolean); const n=Math.max(1,Math.min(nums('picker-count'),items.length)); const picks=[...items].sort(()=>Math.random()-.5).slice(0,n); $('picker-result').textContent=picks.length ? picks.join('、') : '請先輸入選項'; }
+    function shuffleSample(){ $('picker-input').value='早餐\\n午餐\\n晚餐\\n下午茶\\n宵夜'; pickItems(); }
+    function calcPercent(){ const a=nums('percent-a'), b=nums('percent-b'), m=$('percent-mode').value; let text=''; if(m==='of') text=`${a} 的 ${b}% = ${(a*b/100).toFixed(2)}`; if(m==='rate') text=`從 ${a} 到 ${b} 的變化率 = ${(((b-a)/a)*100).toFixed(2)}%`; if(m==='discount') text=`${a} 打 ${b} 折後 = ${money(a*b/10)}`; $('percent-result').textContent=text; }
+    function calcLoan(){ const p=nums('loan-amount'), r=nums('loan-rate')/100/12, m=nums('loan-years')*12; const pay=r ? p*r*Math.pow(1+r,m)/(Math.pow(1+r,m)-1) : p/m; $('loan-result').innerHTML=`每月約 ${money(pay)} 元<small>總付款約 ${money(pay*m)} 元，僅供估算。</small>`; }
+    function calcBMI(){ const h=nums('bmi-height')/100, w=nums('bmi-weight'); const bmi=w/(h*h); let level=bmi<18.5?'過輕':bmi<24?'正常':bmi<27?'過重':'肥胖'; $('bmi-result').textContent=`BMI ${bmi.toFixed(1)}，分類：${level}`; }
+    function makePassword(){ const len=Math.max(8,Math.min(64,nums('pwd-length'))); const symbols=$('pwd-symbols').value==='yes'?'!@#$%^&*()-_=+[]{};:,.?':''; const chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789'+symbols; let out=''; crypto.getRandomValues(new Uint32Array(len)).forEach(n=>out+=chars[n%chars.length]); $('password-result').textContent=out; }
+    async function copyText(id){ const text=$(id).textContent; try{ await navigator.clipboard.writeText(text); $(id).innerHTML=`${text}<small>已複製</small>`; }catch(e){} }
+    function countWords(){ const t=$('word-input').value; const zh=(t.match(/[\u4e00-\u9fff]/g)||[]).length; const en=(t.match(/[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*/g)||[]).length; $('word-result').textContent=`中文字：${zh}，英文/數字詞：${en}，字元：${t.length}，行數：${t ? t.split(/\n/).length : 0}`; }
+    function calcDateDiff(){ const a=new Date($('date-start').value), b=new Date($('date-end').value); if(isNaN(a)||isNaN(b)){ $('date-result').textContent='請選擇兩個日期'; return; } $('date-result').textContent=`相差 ${Math.abs(Math.round((b-a)/86400000))} 天`; }
+    function convertUnit(){ const v=nums('unit-value'), m=$('unit-mode').value; const map={'cm-in':[v/2.54,'英吋'],'in-cm':[v*2.54,'公分'],'kg-lb':[v*2.20462,'磅'],'lb-kg':[v/2.20462,'公斤'],'km-mi':[v/1.60934,'英里'],'mi-km':[v*1.60934,'公里']}; $('unit-result').textContent=`${map[m][0].toFixed(2)} ${map[m][1]}`; }
+    function calcTip(){ const bill=nums('tip-bill'), tip=nums('tip-rate')/100, people=Math.max(1,nums('tip-people')); const total=bill*(1+tip); $('tip-result').innerHTML=`總金額 ${money(total)} 元<small>每人約 ${money(total/people)} 元</small>`; }
+    function convertColor(){ let h=$('color-hex').value.trim().replace('#',''); if(h.length===3) h=h.split('').map(x=>x+x).join(''); if(!/^[0-9a-fA-F]{6}$/.test(h)){ $('color-result').textContent='請輸入正確 HEX 色碼，例如 #2f6f62'; return; } const r=parseInt(h.slice(0,2),16), g=parseInt(h.slice(2,4),16), b=parseInt(h.slice(4,6),16); $('color-swatch').style.background='#'+h; $('color-result').textContent=`RGB(${r}, ${g}, ${b})`; }
+    const today=new Date(), later=new Date(Date.now()+7*86400000); $('date-start').value=today.toISOString().slice(0,10); $('date-end').value=later.toISOString().slice(0,10);
+    countWords(); convertColor(); calcBMI(); calcPercent(); calcLoan(); convertUnit(); calcTip(); makePassword();
+  </script>
+</body>
+</html>
